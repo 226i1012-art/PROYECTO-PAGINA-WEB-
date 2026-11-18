@@ -1,0 +1,24 @@
+SPORTZONE - PAGINAS PREPARADAS PARA AMPLIAR
+
+La página principal index.html conserva su diseño y contenido. Los enlaces del menú, las tarjetas y los botones de detalle abren una pestaña nueva gracias a target="_blank".
+
+CARPETA paginas
+Dentro encontrarás estos archivos:
+- noticias.html
+- deportes.html
+- equipos.html
+- clasificacion.html
+- galeria.html
+- encuesta.html
+- estadios.html
+
+COMO AÑADIR INFORMACION
+1. Abre la carpeta SPORTZONE en Visual Studio Code.
+2. Entra en la carpeta paginas.
+3. Abre el archivo del apartado que quieras completar.
+4. Busca el bloque señalado como "ESPACIO PARA AÑADIR EL CONTENIDO DE ESTA PÁGINA".
+5. Sustituye el texto de ejemplo por tu código HTML.
+
+No cambies las rutas href="paginas/nombre.html" de index.html. Los enlaces ya están conectados. Cada página usa ../estilos.css para compartir los estilos principales y tiene un enlace para volver a index.html.
+
+Abre index.html con Live Server para probar los enlaces. Los archivos de detalle ya están creados como plantillas, por lo que no aparecerá el error de página no encontrada.
