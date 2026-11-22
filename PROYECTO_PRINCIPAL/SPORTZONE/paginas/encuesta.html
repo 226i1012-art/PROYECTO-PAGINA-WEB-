@@ -10,6 +10,15 @@
     .detalle-contenido { max-width:1000px; min-height:55vh; margin:auto; padding:55px 25px; }
     .zona-edicion { border:2px dashed #9bbd43; border-radius:10px; padding:30px; margin-top:25px; background:#fff; }
     .volver { display:inline-block; margin-top:25px; background:#b7f32b; color:#101211; padding:12px 18px; border-radius:5px; text-decoration:none; font-weight:800; }
+
+    /* Ajustes para integrar el formulario oscuro de estilos.css dentro de la zona blanca */
+    .formulario-ampliado { max-width: 100%; color: #f4f5f2; }
+    .grupo-campos { border: 1px solid #303630; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+    .grupo-campos legend { color: #b7f32b; font-weight: 800; font-size: 13px; padding: 0 10px; letter-spacing: 1px; }
+    .formulario-ampliado label { color: #f4f5f2; }
+    .botones-form { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .btn-secundario { background: #303630 !important; color: #f4f5f2 !important; }
+    .btn-secundario:hover { background: #424a42 !important; }
   </style>
 </head>
 <body>
@@ -17,21 +26,71 @@
     <div class="marca">SPORT<span>ZONE</span></div>
     <p class="eslogan">VIVE EL DEPORTE. SIGUE LA PASIÓN.</p>
   </header>
+
   <main class="detalle-contenido">
-    <p class="etiqueta">SPORTZONE · INFORMACIÓN AMPLIADA</p>
+    <p class="etiqueta">SPORTZONE · PARTICIPACIÓN Y CONTACTO</p>
     <h1>Encuesta y contacto</h1>
-    <p>Aquí puedes añadir o ampliar el formulario de encuesta y contacto.</p>
+    <p>Tu opinión nos ayuda a mejorar la cobertura deportiva del portal. Completa el siguiente formulario con tus preferencias.</p>
 
     <section class="zona-edicion">
-      <!-- ESPACIO PARA AÑADIR EL CONTENIDO DE ESTA PÁGINA.
-           Puedes insertar aquí tus títulos, párrafos, imágenes, tablas,
-           tarjetas, formularios u otros elementos HTML. -->
-      <h2>Contenido del apartado</h2>
-      <p>Reemplaza este texto por la información que quieras mostrar.</p>
+      <form class="formulario formulario-ampliado" action="#" method="post">
+        
+        <!-- BLOQUE 1: IDENTIFICACIÓN DEL USUARIO -->
+        <fieldset class="grupo-campos">
+          <legend>1. DATOS DEL AFICIONADO</legend>
+          <div class="form-grid">
+            <label for="nombre">Nombre completo *
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Kevin Solano" required>
+            </label>
+
+            <label for="correo">Correo electrónico *
+              <input type="email" id="correo" name="correo" placeholder="usuario@dominio.com" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- BLOQUE 2: PREFERENCIAS DEPORTIVAS -->
+        <fieldset class="grupo-campos">
+          <legend>2. PREFERENCIAS DEPORTIVAS</legend>
+          <div class="form-grid">
+            <label for="deporte">Deporte favorito *
+              <select id="deporte" name="deporte" required>
+                <option value="">-- Selecciona una disciplina --</option>
+                <option value="futbol">Fútbol</option>
+                <option value="baloncesto">Baloncesto</option>
+                <option value="tenis">Tenis</option>
+                <option value="atletismo">Atletismo</option>
+                <option value="otro">Otro deporte</option>
+              </select>
+            </label>
+
+            <label for="equipo">Equipo o deportista favorito
+              <input type="text" id="equipo" name="equipo" placeholder="Ej. Real Madrid, Lakers, Rafael Nadal...">
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- BLOQUE 3: OPINIÓN Y SUGERENCIAS -->
+        <fieldset class="grupo-campos">
+          <legend>3. COMENTARIOS Y SUGERENCIAS</legend>
+          <label for="opinion">Opinión o sugerencia para SPORTZONE *
+            <textarea id="opinion" name="opinion" rows="5" placeholder="Cuéntanos qué competiciones, estadísticas o noticias te gustaría ver en la web..." required></textarea>
+          </label>
+        </fieldset>
+
+        <!-- BOTONES DE ACCIÓN -->
+        <div class="botones-form">
+          <button type="submit">Enviar encuesta</button>
+          <button type="reset" class="btn-secundario">Limpiar formulario</button>
+        </div>
+
+        <p class="nota-form">Nota técnica: Formulario estático de demostración desarrollado exclusivamente con HTML5 y CSS3. No almacena ni envía respuestas a un servidor.</p>
+      </form>
     </section>
 
     <a class="volver" href="../index.html">← Volver a SPORTZONE</a>
   </main>
+
   <footer class="pie">
     <div class="marca">SPORT<span>ZONE</span></div>
     <p>Tu espacio para conocer, disfrutar y vivir el deporte.</p>
