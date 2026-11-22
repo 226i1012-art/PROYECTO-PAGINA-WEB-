@@ -10,6 +10,23 @@
     .detalle-contenido { max-width:1000px; min-height:55vh; margin:auto; padding:55px 25px; }
     .zona-edicion { border:2px dashed #9bbd43; border-radius:10px; padding:30px; margin-top:25px; background:#fff; }
     .volver { display:inline-block; margin-top:25px; background:#b7f32b; color:#101211; padding:12px 18px; border-radius:5px; text-decoration:none; font-weight:800; }
+
+    /* Estilos específicos para diferenciar filas y zonas en la tabla oscura */
+    .titulo-liga { color: #101211; margin: 25px 0 12px; font-size: 20px; border-left: 5px solid #b7f32b; padding-left: 12px; }
+    .tabla-ampliada { color: #f4f5f2; margin-bottom: 15px; }
+    .tabla-ampliada caption { caption-side: top; text-align: left; font-size: 12px; color: #626762; margin-bottom: 8px; font-weight: 600; }
+    /* Diferenciación de filas pares e impares (efecto cebra) */
+    .tabla-ampliada tbody tr:nth-child(even) { background-color: #222823; }
+    .tabla-ampliada tbody tr:hover { background-color: #2e362f; }
+    /* Indicadores visuales de zona de clasificación */
+    .zona-champions td:first-child { border-left: 5px solid #b7f32b; font-weight: 900; color: #b7f32b; }
+    .zona-europa td:first-child { border-left: 5px solid #38bdf8; font-weight: 900; color: #38bdf8; }
+    .zona-descenso td:first-child { border-left: 5px solid #ef4444; font-weight: 900; color: #ef4444; }
+    .col-puntos { font-weight: 900; color: #b7f32b; font-size: 14px; }
+    .tabla-ampliada tfoot td { background-color: #121513; color: #a6aaa6; font-size: 11px; text-align: left; padding: 10px 16px; }
+    .leyenda { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12px; margin-bottom: 30px; color: #444; }
+    .leyenda span { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+    .punto { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
   </style>
 </head>
 <body>
@@ -17,21 +34,184 @@
     <div class="marca">SPORT<span>ZONE</span></div>
     <p class="eslogan">VIVE EL DEPORTE. SIGUE LA PASIÓN.</p>
   </header>
+
   <main class="detalle-contenido">
-    <p class="etiqueta">SPORTZONE · INFORMACIÓN AMPLIADA</p>
+    <p class="etiqueta">SPORTZONE · RESULTADOS Y CLASIFICACIONES</p>
     <h1>Clasificación ampliada</h1>
-    <p>Aquí puedes añadir una tabla más completa con posiciones, equipos, partidos y puntos.</p>
+    <p>Consulta el rendimiento detallado, partidos disputados y puntuación actualizada de los clubes en las principales competiciones.</p>
 
     <section class="zona-edicion">
-      <!-- ESPACIO PARA AÑADIR EL CONTENIDO DE ESTA PÁGINA.
-           Puedes insertar aquí tus títulos, párrafos, imágenes, tablas,
-           tarjetas, formularios u otros elementos HTML. -->
-      <h2>Contenido del apartado</h2>
-      <p>Reemplaza este texto por la información que quieras mostrar.</p>
+      <!-- ==================== TABLA 1: LIGA DE FÚTBOL ==================== -->
+      <h2 class="titulo-liga">⚽ Primera División · Fútbol</h2>
+      <div class="tabla-contenedor">
+        <table class="tabla-ampliada">
+          <caption>Temporada 2026/2027 · Jornada 12</caption>
+          <thead>
+            <tr>
+              <th>Posición</th>
+              <th>Equipo</th>
+              <th>Partidos jugados</th>
+              <th>Victorias</th>
+              <th>Empates</th>
+              <th>Derrotas</th>
+              <th>Puntos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="zona-champions">
+              <td>1</td>
+              <td>Real Madrid CF</td>
+              <td>12</td>
+              <td>9</td>
+              <td>2</td>
+              <td>1</td>
+              <td class="col-puntos">29</td>
+            </tr>
+            <tr class="zona-champions">
+              <td>2</td>
+              <td>FC Barcelona</td>
+              <td>12</td>
+              <td>9</td>
+              <td>1</td>
+              <td>2</td>
+              <td class="col-puntos">28</td>
+            </tr>
+            <tr class="zona-champions">
+              <td>3</td>
+              <td>Atlético de Madrid</td>
+              <td>12</td>
+              <td>7</td>
+              <td>3</td>
+              <td>2</td>
+              <td class="col-puntos">24</td>
+            </tr>
+            <tr class="zona-europa">
+              <td>4</td>
+              <td>Athletic Club</td>
+              <td>12</td>
+              <td>6</td>
+              <td>4</td>
+              <td>2</td>
+              <td class="col-puntos">22</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Villarreal CF</td>
+              <td>12</td>
+              <td>6</td>
+              <td>3</td>
+              <td>3</td>
+              <td class="col-puntos">21</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Real Sociedad</td>
+              <td>12</td>
+              <td>5</td>
+              <td>3</td>
+              <td>4</td>
+              <td class="col-puntos">18</td>
+            </tr>
+            <tr class="zona-descenso">
+              <td>7</td>
+              <td>RCD Espanyol</td>
+              <td>12</td>
+              <td>2</td>
+              <td>3</td>
+              <td>7</td>
+              <td class="col-puntos">9</td>
+            </tr>
+            <tr class="zona-descenso">
+              <td>8</td>
+              <td>Real Valladolid</td>
+              <td>12</td>
+              <td>1</td>
+              <td>3</td>
+              <td>8</td>
+              <td class="col-puntos">6</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7">Sistema de puntuación: Victoria = 3 pts · Empate = 1 pt · Derrota = 0 pts.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Leyenda visual de colores -->
+      <div class="leyenda">
+        <span><i class="punto" style="background:#b7f32b;"></i> Fase de Grupos Champions</span>
+        <span><i class="punto" style="background:#38bdf8;"></i> Clasificación Europea</span>
+        <span><i class="punto" style="background:#ef4444;"></i> Zona de Descenso</span>
+      </div>
+
+      <!-- ==================== TABLA 2: LIGA DE BALONCESTO ==================== -->
+      <h2 class="titulo-liga">🏀 Liga Profesional · Baloncesto</h2>
+      <div class="tabla-contenedor">
+        <table class="tabla-ampliada">
+          <caption>Conferencia Oeste · Fase Regular</caption>
+          <thead>
+            <tr>
+              <th>Posición</th>
+              <th>Equipo</th>
+              <th>Partidos jugados</th>
+              <th>Victorias</th>
+              <th>Empates</th>
+              <th>Derrotas</th>
+              <th>Puntos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="zona-champions">
+              <td>1</td>
+              <td>Los Angeles Lakers</td>
+              <td>10</td>
+              <td>8</td>
+              <td>0</td>
+              <td>2</td>
+              <td class="col-puntos">18</td>
+            </tr>
+            <tr class="zona-champions">
+              <td>2</td>
+              <td>Denver Nuggets</td>
+              <td>10</td>
+              <td>7</td>
+              <td>0</td>
+              <td>3</td>
+              <td class="col-puntos">17</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Golden State Warriors</td>
+              <td>10</td>
+              <td>6</td>
+              <td>0</td>
+              <td>4</td>
+              <td class="col-puntos">16</td>
+            </tr>
+            <tr class="zona-descenso">
+              <td>4</td>
+              <td>Phoenix Suns</td>
+              <td>10</td>
+              <td>4</td>
+              <td>0</td>
+              <td>6</td>
+              <td class="col-puntos">14</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7">Nota: En baloncesto no existen empates reglamentarios (prórroga obligatoria).</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </section>
 
     <a class="volver" href="../index.html">← Volver a SPORTZONE</a>
   </main>
+
   <footer class="pie">
     <div class="marca">SPORT<span>ZONE</span></div>
     <p>Tu espacio para conocer, disfrutar y vivir el deporte.</p>
